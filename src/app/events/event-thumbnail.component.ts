@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core'
+import { IEvent} from './shared/event.model'
 
 @Component({
     selector:'event-thumbnail',
@@ -32,7 +33,7 @@ styles:[`
 `]
 })
 export class EventThumbnailComponent{
-    @Input() event:any;
+    @Input() event:IEvent;
     getStartTimeStyle():any{
        if(this.event && this.event.time === '8:00 am')
         return {color:'#003300', "font-weight":'bold'}
